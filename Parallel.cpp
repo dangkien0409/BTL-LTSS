@@ -252,70 +252,12 @@ int main(int argc, char *argv[]) {
 	}
     
 
-
-
-    /*string line;
-    getline(file, line); // Skip header line
-    while (getline(file, line)) {
-        stringstream ss(line);
-        string source, target, weightStr;
-        getline(ss, source, ',');
-        getline(ss, target, ',');
-        getline(ss, weightStr, ',');
-        int weight = stoi(weightStr);
-
-        // Add edge from source to target with weight
-        graph[source][target] = weight;
-
-        // Check if the source and target nodes are new
-        uniqueNodes.insert(source);
-        uniqueNodes.insert(target);
-    }*/
-
     file.close();
 
     //Number of unique nodes in the graph
     int N = uniqueNodes.size();
 
-        /*
-        if (!file.is_open()) {
-            cerr << "Error: Unable to open the file." << endl;
-            return 1;
-        }
-
-        Graph graph;
-        unordered_set<string> uniqueNodes;
-
-        string line;
-        // Skip the header lines
-        for (int i = 0; i < 4; ++i) {
-            getline(file, line);
-        }
-
-        while (getline(file, line)) {
-            stringstream ss(line);
-            string source, target;
-            getline(ss, source, '\t');
-            getline(ss, target);
-
-            // Assign a default weight of 1 to every edge
-            int weight = 1;
-
-            // Add edge from source to target with weight
-            graph[source][target] = weight;
-
-            // Check if the source and target nodes are new
-            uniqueNodes.insert(source);
-            uniqueNodes.insert(target);
-        }
-
-        file.close();
-
-        // Number of unique nodes in the graph
-        int N = uniqueNodes.size();*/
-
-    // Calculate the k shortest paths using Yen's algorithm
-    // Start measuring time
+       
     
     
     cout<<"Parallel Version"<<endl;
