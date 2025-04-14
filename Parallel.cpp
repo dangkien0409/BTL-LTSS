@@ -277,7 +277,7 @@ int main(int argc, char *argv[]) {
     //Number of unique nodes in the graph
     int N = uniqueNodes.size();
 
-        /*ifstream file("C:\\Users\\Ahsan\\Downloads\\email-EuAll.txt\\Email-EuAll.txt");
+        /*
         if (!file.is_open()) {
             cerr << "Error: Unable to open the file." << endl;
             return 1;
