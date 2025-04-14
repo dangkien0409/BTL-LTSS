@@ -149,9 +149,7 @@ vector<Path> yenKSP(Graph& graph, string startNode, string endNode, int K) {
                 }
             newPath.nodes.insert(newPath.nodes.end(), spurPath.nodes.begin(), spurPath.nodes.end());
 
-            /*if (currPath.nodes[0] != spurNode)
-            newPath.totalWeight = currPath.totalWeight - graph[currPath.nodes[i]][currPath.nodes[i + 1]] + spurPath.totalWeight;
-            else*/
+
             newPath.totalWeight = spurPath.totalWeight;
 
             // Add the new path to candidate paths
@@ -169,8 +167,6 @@ vector<Path> yenKSP(Graph& graph, string startNode, string endNode, int K) {
                     candidatePaths.push(newPath);
                 }
             }
-            
-
             
 
             // Restore the graph to its original state
@@ -236,15 +232,7 @@ int main() {
     //Number of unique nodes in the graph
     int N = uniqueNodes.size();
 
-        /*
-        if (!file.is_open()) {
-            cerr << "Error: Unable to open the file." << endl;
-            return 1;
-        }
-
-        Graph graph;
-        unordered_set<string> uniqueNodes;
-
+       
         string line;
         // Skip the header lines
         for (int i = 0; i < 4; ++i) {
